@@ -22,7 +22,7 @@ public class DashBoard extends javax.swing.JFrame {
         
     }
     Color navcolor = new Color(0,51,153);
-    Color hover = new Color(204,255,255);
+    Color hover = new Color(0,0,102);
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,6 +36,7 @@ public class DashBoard extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
         jPanel3 = new javax.swing.JPanel();
         nav1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -56,15 +57,19 @@ public class DashBoard extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 255));
 
+        kGradientPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addComponent(kGradientPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel2);
@@ -98,6 +103,9 @@ public class DashBoard extends javax.swing.JFrame {
 
         nav3.setBackground(new java.awt.Color(0, 51, 153));
         nav3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nav3MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 nav3MouseEntered(evt);
             }
@@ -111,9 +119,9 @@ public class DashBoard extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Options");
-        nav3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 20));
+        nav3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 90, 30));
 
-        jPanel3.add(nav3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 120, 30));
+        jPanel3.add(nav3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 120, 40));
 
         nav4.setBackground(new java.awt.Color(0, 51, 153));
         nav4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -179,7 +187,7 @@ public class DashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_nav3MouseExited
 
     private void nav1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nav1MouseClicked
-       Internal up = new Internal();
+       HomePage up = new HomePage();
        MainPanel.add(up).setVisible(true);
     }//GEN-LAST:event_nav1MouseClicked
 
@@ -192,9 +200,14 @@ public class DashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_nav4MouseExited
 
     private void nav4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nav4MouseClicked
-     AccountPanel account = new AccountPanel();
-      MainPanel.add(account).setVisible(true);
+      AccountPanel acc = new AccountPanel();
+      MainPanel.add(acc).setVisible(true);
     }//GEN-LAST:event_nav4MouseClicked
+
+    private void nav3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nav3MouseClicked
+      Options up = new Options();
+      MainPanel.add(up).setVisible(true);
+    }//GEN-LAST:event_nav3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -240,6 +253,7 @@ public class DashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField1;
+    private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JPanel nav1;
     private javax.swing.JPanel nav3;
     private javax.swing.JPanel nav4;

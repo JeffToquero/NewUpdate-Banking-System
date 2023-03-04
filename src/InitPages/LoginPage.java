@@ -5,6 +5,7 @@
  */
 package InitPages;
 
+import Forms.AdminSignIn;
 import Forms.SignUp1;
 import java.awt.Color;
 
@@ -35,13 +36,14 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         click = new javax.swing.JLabel();
-        navclick = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
+        navclick = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPasswordField1 = new javax.swing.JPasswordField();
         logbut = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,19 +73,7 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
         jPanel3.add(click);
-        click.setBounds(130, 220, 60, 20);
-
-        navclick.setBackground(new java.awt.Color(255, 255, 255));
-        navclick.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                navclickMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                navclickMouseExited(evt);
-            }
-        });
-        jPanel3.add(navclick);
-        navclick.setBounds(120, 220, 70, 20);
+        click.setBounds(140, 220, 60, 20);
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 18)), "Account No.", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 12), java.awt.SystemColor.control), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("sansserif", 1, 12), java.awt.SystemColor.control)); // NOI18N
@@ -103,6 +93,18 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel3.add(jPanel4);
         jPanel4.setBounds(10, 60, 300, 50);
 
+        navclick.setBackground(new java.awt.Color(255, 255, 255));
+        navclick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                navclickMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                navclickMouseExited(evt);
+            }
+        });
+        jPanel3.add(navclick);
+        navclick.setBounds(130, 220, 70, 20);
+
         jPanel5.setBackground(new java.awt.Color(0, 153, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 18)), "Password", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 12), java.awt.SystemColor.control), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP)); // NOI18N
         jPanel5.setForeground(java.awt.SystemColor.control);
@@ -111,7 +113,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel5.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 18, 300, 30));
+        jPanel5.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, 30));
 
         jPanel3.add(jPanel5);
         jPanel5.setBounds(10, 110, 300, 48);
@@ -132,13 +134,25 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
         jPanel3.add(logbut);
-        logbut.setBounds(110, 160, 100, 30);
+        logbut.setBounds(100, 160, 130, 30);
 
         jLabel1.setText("Want to create a new account?");
         jPanel3.add(jLabel1);
         jLabel1.setBounds(80, 200, 170, 20);
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 320, 250));
+        jButton1.setBackground(new java.awt.Color(51, 0, 0));
+        jButton1.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jButton1.setForeground(java.awt.SystemColor.controlLtHighlight);
+        jButton1.setText("Admin Login");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jButton1);
+        jButton1.setBounds(100, 250, 130, 40);
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 320, 310));
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
         jPanel1.setLayout(null);
@@ -191,6 +205,12 @@ public class LoginPage extends javax.swing.JFrame {
       navclick.setBackground(color);
     }//GEN-LAST:event_navclickMouseExited
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+     AdminSignIn auth = new AdminSignIn();
+     auth.setVisible(true);
+ 
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -222,12 +242,14 @@ public class LoginPage extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginPage().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel click;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

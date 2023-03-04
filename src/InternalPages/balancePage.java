@@ -10,16 +10,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author Jeffrey Toquero
  */
-public class WithdrawalFrame extends javax.swing.JInternalFrame {
+public class balancePage extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form WithdrawalFrame
+     * Creates new form balancePage
      */
-    public WithdrawalFrame() {
-        initComponents();
+    public balancePage() {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
+        initComponents();
     }
 
     /**
@@ -34,40 +34,38 @@ public class WithdrawalFrame extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
-        jPanel1.setBorder(null);
+        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(java.awt.SystemColor.controlLtHighlight);
         jLabel1.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
-        jLabel1.setForeground(java.awt.SystemColor.controlLtHighlight);
+        jLabel1.setForeground(java.awt.SystemColor.controlHighlight);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\lenovo\\OneDrive\\Desktop\\Icons and pictures for programming\\withdraw 64x64.png")); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 110, 100));
+        jLabel1.setText("BALANCE PAGE");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 270, 80));
 
-        jLabel2.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
-        jLabel2.setForeground(java.awt.SystemColor.controlLtHighlight);
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("WITHDRAWAL PAGE");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 300, 110));
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\lenovo\\OneDrive\\Desktop\\Icons and pictures for programming\\balance 64x64.png")); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 770, 110));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 100));
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 153));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 750, 320));
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 0, 51));
+        kGradientPanel1.setkStartColor(new java.awt.Color(0, 51, 51));
+        kGradientPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 75, 760, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    static javax.swing.JLabel jLabel1;
-    static javax.swing.JLabel jLabel2;
-    static javax.swing.JPanel jPanel1;
-    static javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private keeptoo.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }

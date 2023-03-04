@@ -1,31 +1,29 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package InternalPages;
 import java.awt.Color;
+import static InitPages.DashBoard.MainPanel;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
-
 
 /**
  *
- * @author SCC COMPLAB
+ * @author Jeffrey Toquero
  */
 public class HomePage extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form Internal
+     * Creates new form home
      */
     public HomePage() {
         initComponents();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
     }
 Color navcolor = new Color(0,102,204);
     Color hover = new Color(0,0,102);
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,7 +33,7 @@ Color navcolor = new Color(0,102,204);
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        UserPage = new javax.swing.JPanel();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
         withdrawpane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -45,18 +43,17 @@ Color navcolor = new Color(0,102,204);
         balancepane = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        userpane = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(650, 360));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        UserPage.setBackground(java.awt.SystemColor.activeCaption);
-        UserPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 51, 102));
+        kGradientPanel1.setkStartColor(new java.awt.Color(102, 0, 0));
+        kGradientPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         withdrawpane.setBackground(new java.awt.Color(0, 102, 204));
+        withdrawpane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         withdrawpane.setForeground(new java.awt.Color(204, 255, 255));
         withdrawpane.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -81,10 +78,14 @@ Color navcolor = new Color(0,102,204);
         jLabel9.setText("Withdraw");
         withdrawpane.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 160, -1));
 
-        UserPage.add(withdrawpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 170, 170));
+        kGradientPanel1.add(withdrawpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 170));
 
         depositpane.setBackground(new java.awt.Color(0, 102, 204));
+        depositpane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         depositpane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                depositpaneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 depositpaneMouseEntered(evt);
             }
@@ -104,10 +105,14 @@ Color navcolor = new Color(0,102,204);
         jLabel6.setText("Deposit");
         depositpane.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 170, -1));
 
-        UserPage.add(depositpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 170, 170));
+        kGradientPanel1.add(depositpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 170, 170));
 
         balancepane.setBackground(new java.awt.Color(0, 102, 204));
+        balancepane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         balancepane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                balancepaneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 balancepaneMouseEntered(evt);
             }
@@ -115,133 +120,97 @@ Color navcolor = new Color(0,102,204);
                 balancepaneMouseExited(evt);
             }
         });
-        balancepane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        balancepane.setLayout(null);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\lenovo\\OneDrive\\Desktop\\Icons and pictures for programming\\balance.png")); // NOI18N
-        balancepane.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, -1));
+        balancepane.add(jLabel5);
+        jLabel5.setBounds(10, 10, 150, 100);
 
         jLabel8.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jLabel8.setForeground(java.awt.SystemColor.controlLtHighlight);
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Balance");
-        balancepane.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 170, -1));
+        jLabel8.setText("My Balance");
+        balancepane.add(jLabel8);
+        jLabel8.setBounds(0, 130, 170, 23);
 
-        UserPage.add(balancepane, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 170, 170));
+        kGradientPanel1.add(balancepane, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 170, 170));
 
-        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userpane.setBackground(new java.awt.Color(0, 51, 102));
-        userpane.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                userpaneMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                userpaneMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                userpaneMouseExited(evt);
-            }
-        });
-        userpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InternalPages/Icons/user.png"))); // NOI18N
-        userpane.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 120, 90));
-
-        jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jLabel2.setForeground(java.awt.SystemColor.controlLtHighlight);
+        jLabel2.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel2.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
+        jLabel2.setForeground(java.awt.SystemColor.control);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("User");
-        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 140, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\lenovo\\OneDrive\\Desktop\\Icons and pictures for programming\\bank.png")); // NOI18N
+        jLabel2.setText("MINI-BANK");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 640, 80));
 
-        jPanel4.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 140, 110));
+        kGradientPanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 770, 80));
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
-        jLabel4.setForeground(java.awt.SystemColor.controlLtHighlight);
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("BANK SYSTEM");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 460, 90));
-
-        UserPage.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 130));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(UserPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(UserPage, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 0, 760, 402));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void withdrawpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawpaneMouseClicked
+        WithdrawalFrame withdraw = new WithdrawalFrame();
+        MainPanel.add(withdraw);
+        withdraw.setVisible(true);
+        
+      
+    }//GEN-LAST:event_withdrawpaneMouseClicked
 
     private void withdrawpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawpaneMouseEntered
         withdrawpane.setBackground(hover);
     }//GEN-LAST:event_withdrawpaneMouseEntered
 
     private void withdrawpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawpaneMouseExited
-       withdrawpane.setBackground(navcolor);
+        withdrawpane.setBackground(navcolor);
     }//GEN-LAST:event_withdrawpaneMouseExited
 
     private void depositpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositpaneMouseEntered
-     depositpane.setBackground(hover);
+        depositpane.setBackground(hover);
     }//GEN-LAST:event_depositpaneMouseEntered
 
     private void depositpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositpaneMouseExited
-     depositpane.setBackground(navcolor);
+        depositpane.setBackground(navcolor);
     }//GEN-LAST:event_depositpaneMouseExited
 
     private void balancepaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_balancepaneMouseEntered
-     balancepane.setBackground(hover);
+        balancepane.setBackground(hover);
     }//GEN-LAST:event_balancepaneMouseEntered
 
     private void balancepaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_balancepaneMouseExited
-     balancepane.setBackground(navcolor);
+        balancepane.setBackground(navcolor);
     }//GEN-LAST:event_balancepaneMouseExited
 
-    private void userpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseEntered
-    userpane.setBackground(hover);
-    }//GEN-LAST:event_userpaneMouseEntered
+    private void depositpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositpaneMouseClicked
+      depositPage depo = new depositPage();
+        MainPanel.add(depo);
+        depo.setVisible(true);
+    }//GEN-LAST:event_depositpaneMouseClicked
 
-    private void userpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseExited
-    userpane.setBackground(navcolor);
-    }//GEN-LAST:event_userpaneMouseExited
-
-    private void userpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseClicked
-    AccountPanel acc = new AccountPanel();
-    acc.setVisible(true);
-    this.dispose();
-    }//GEN-LAST:event_userpaneMouseClicked
-
-    private void withdrawpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawpaneMouseClicked
-    WithdrawalFrame withdraw = new WithdrawalFrame();
-    withdraw.setVisible(true);
-    this.dispose();
-    }//GEN-LAST:event_withdrawpaneMouseClicked
+    private void balancepaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_balancepaneMouseClicked
+     balancePage bal = new balancePage();
+     MainPanel.add(bal);
+     bal.setVisible(true);
+    }//GEN-LAST:event_balancepaneMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel UserPage;
     private javax.swing.JPanel balancepane;
     private javax.swing.JPanel depositpane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel userpane;
+    private javax.swing.JPanel jPanel1;
+    private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JPanel withdrawpane;
     // End of variables declaration//GEN-END:variables
 }

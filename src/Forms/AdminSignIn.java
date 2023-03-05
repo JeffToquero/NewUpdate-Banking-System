@@ -10,7 +10,7 @@ import adminpack.AdminPage;
  *
  * @author Jeffrey Toquero
  */
-public class AdminSignIn extends javax.swing.JPanel {
+public class AdminSignIn extends javax.swing.JPanel { 
 
     /**
      * Creates new form AdminSignIn
@@ -18,6 +18,8 @@ public class AdminSignIn extends javax.swing.JPanel {
     public AdminSignIn() {
         initComponents();
     }
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -95,6 +97,6 @@ public class AdminSignIn extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
-    private keeptoo.KGradientPanel kGradientPanel1;
+    public keeptoo.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }
